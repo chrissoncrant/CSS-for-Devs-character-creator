@@ -61,7 +61,7 @@
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .characterEditor {
     overflow: hidden;
   }
@@ -72,6 +72,7 @@
 
   .characterWrapper2 {
     display: block;
+    top: -50px;
   }
 
   .controlColumn {
@@ -80,9 +81,41 @@
     max-width: 150%;
     gap: 16px;
     margin-inline: -32px;
+    margin-bottom: 150px;
   }
 
   .controlColumn > * {
     min-width: 300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    width: 35%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    visibility: hidden;
+    min-width: 125px;
+  }
+
+  .characterWrapper2 {
+    display: block;
+    top: 0px;
   }
 }
