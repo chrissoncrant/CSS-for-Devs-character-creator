@@ -1,13 +1,16 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  position: relative;
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  max-width: 65%;
 }
 
 .title {
@@ -23,8 +26,63 @@
   margin: 0;
 }
 
-.characterWrapper {
+.characterWrapper1 {
+  position: fixed;
+  top: 128px;
+  right: 0px;
+  min-height: 500px;
+  height: 85vh;
+}
+
+.characterWrapper2 {
+  position: absolute;
+  top: 80px;
+  right: -100px;
+  min-height: 500px;
+  height: 80vh;
+  display:none;
 }
 
 .controlColumn {
+  max-width: 50%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.perspectiveBar {
+  height: 400px;
+  width: 100%;
+  background-color: hsl(195deg, 20%, 86%);
+  position: absolute;
+  bottom: 0;
+}
+
+.mediaCharacter {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .characterEditor {
+    overflow: hidden;
+  }
+
+  .characterWrapper1 {
+    display: none;
+  }
+
+  .characterWrapper2 {
+    display: block;
+  }
+
+  .controlColumn {
+    display: flex;
+    overflow: auto;
+    max-width: 150%;
+    gap: 16px;
+    margin-inline: -32px;
+  }
+
+  .controlColumn > * {
+    min-width: 300px;
+  }
 }
