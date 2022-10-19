@@ -2,6 +2,7 @@
   padding-top: 128px;
   padding-bottom: 64px;
   position: relative;
+  z-index: 2;
 }
 
 .maxWidthWrapper {
@@ -28,24 +29,26 @@
 
 .characterWrapper1 {
   position: fixed;
-  top: 128px;
-  right: 0px;
+  top: 10%;
+  bottom: 5%;
+  left: 65%;
   min-height: 500px;
-  height: 85vh;
+  border: solid red;
 }
 
 .characterWrapper2 {
   position: absolute;
-  top: 80px;
-  right: -100px;
+  text-align: center;
+  top: 0%;
+  bottom: 0;
+  left: 45%;
   min-height: 500px;
-  height: 80vh;
   display:none;
+  border: solid green;
 }
 
 .controlColumn {
   max-width: 50%;
-  white-space: nowrap;
   position: relative;
 }
 
@@ -62,8 +65,13 @@
 }
 
 @media (max-width: 900px) {
+  
   .characterEditor {
     overflow: hidden;
+  }
+
+  .header {
+    width: 50%;
   }
 
   .characterWrapper1 {
@@ -72,7 +80,6 @@
 
   .characterWrapper2 {
     display: block;
-    top: -50px;
   }
 
   .controlColumn {
@@ -91,7 +98,7 @@
 
 @media (max-width: 650px) {
   .header {
-    width: 35%;
+    width: 45%;
   }
 
   .title {
@@ -106,16 +113,19 @@
     font-size: 1rem;
     margin: 0;
   }
+
+  .characterWrapper2 {
+    left: 40%;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .header {
     visibility: hidden;
     min-width: 125px;
   }
 
   .characterWrapper2 {
-    display: block;
-    top: 0px;
+    left: 0%;
   }
 }
