@@ -1,8 +1,6 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
-  position: relative;
-  z-index: 2;
 }
 
 .maxWidthWrapper {
@@ -40,11 +38,10 @@
   position: absolute;
   text-align: center;
   top: 0%;
-  bottom: 0;
+  bottom: 5px;
   left: 45%;
   min-height: 500px;
   display:none;
-  border: solid green;
 }
 
 .controlColumn {
@@ -53,10 +50,10 @@
 }
 
 .perspectiveBar {
-  height: 400px;
+  height: 200px;
   width: 100%;
   background-color: hsl(195deg, 20%, 86%);
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
@@ -126,6 +123,6 @@
   }
 
   .characterWrapper2 {
-    left: 0%;
+    left: 10%;
   }
 }
